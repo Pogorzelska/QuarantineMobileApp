@@ -20,7 +20,7 @@ const AddResponse = (props) => {
     setLocation(location);
   };
 
-  const savePlaceHandler = () => {
+  const saveResponseHandler = () => {
     const currentdatetime = new Date().toLocaleString();
     dispatch(
       responsesActions.addResponse(
@@ -37,7 +37,7 @@ const AddResponse = (props) => {
     <View style={{ flex: 1 }}>
       <ImagePicker onImageTaken={imageTakenHandler} />
       <LocationPicker onLocationFetch={onLocationFetch} />
-      <Button title="Save" onPress={savePlaceHandler} />
+      <Button title="Save" onPress={saveResponseHandler} />
     </View>
   );
 };

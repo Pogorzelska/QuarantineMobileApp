@@ -1,6 +1,6 @@
 import * as FileSystem from "expo-file-system";
 
-import { insertPlace, fetchresponses } from "../helpers/db";
+import { insertResponse, fetchresponses } from "../helpers/db";
 
 export const ADD_RESPONSE = "ADD_RESPONSE";
 export const SET_RESPONSES = "SET_RESPONSES";
@@ -15,7 +15,7 @@ export const addResponse = (image, lat, lng, datetime) => {
         from: image,
         to: newPath,
       });
-      const dbResult = await insertPlace(newPath, lat, lng, datetime);
+      const dbResult = await insertResponse(newPath, lat, lng, datetime);
       console.log(dbResult);
       dispatch({
         type: ADD_RESPONSE,

@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 const ResponseItem = (props) => {
   return (
-    <TouchableOpacity onPress={props.onSelect} style={styles.placeItem}>
+    <TouchableOpacity onPress={props.onSelect} style={styles.responseItem}>
       <Image style={styles.image} source={{ uri: props.image }} />
       <View style={styles.infoContainer}>
         <Text style={styles.datetime}>{props.datetime}</Text>
@@ -15,7 +15,7 @@ const ResponseItem = (props) => {
 };
 
 const styles = StyleSheet.create({
-  placeItem: {
+  responseItem: {
     borderBottomColor: "#ccc",
     borderBottomWidth: 1,
     paddingVertical: 15,

@@ -20,7 +20,7 @@ export const init = () => {
   return promise;
 };
 
-export const insertPlace = (imageUri, lat, lng, datetime) => {
+export const insertResponse = (imageUri, lat, lng, datetime) => {
   const promise = new Promise((resolve, reject) => {
     db.transaction((tx) => {
       tx.executeSql(
